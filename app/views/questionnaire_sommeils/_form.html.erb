@@ -1,0 +1,92 @@
+<%= form_with(model: questionnaire_sommeil) do |form| %>
+  <% if questionnaire_sommeil.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(questionnaire_sommeil.errors.count, "error") %> prohibited this questionnaire_sommeil from being saved:</h2>
+
+      <ul>
+        <% questionnaire_sommeil.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :email, class: "input-group-text" %>
+    <%= form.text_field :email, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :telephone, class: "input-group-text" %>
+    <%= form.text_field :telephone, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :adresse, class: "input-group-text" %>
+    <%= form.text_field :adresse, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :pere, class: "input-group-text" %>
+    <%= form.text_field :pere, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :mere, class: "input-group-text" %>
+    <%= form.text_field :mere, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :enfant, class: "input-group-text" %>
+    <%= form.text_field :enfant, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :poids, class: "input-group-text" %>
+    <%= form.number_field :poids, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :freres_soeurs, class: "input-group-text" %>
+    <%= form.check_box :freres_soeurs, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :rituel, class: "input-group-text" %>
+    <%= form.check_box :rituel, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :duree_rituel, class: "input-group-text" %>
+    <%= form.number_field :duree_rituel, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :lieu_nuit, class: "input-group-text" %>
+    <%= form.text_field :lieu_nuit, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :objectif, class: "input-group-text" %>
+    <%= form.text_area :objectif, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :produit_id, class: "input-group-text" %>
+    <%= form.text_field :produit_id, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :niveau_activite, class: "input-group-text" %>
+    <%= form.number_field :niveau_activite, class: "form-control" %>
+  </div>
+
+  <div class="input-group input-group-sm my-1">
+    <%= form.label :intensite_reaction, class: "input-group-text" %>
+    <%= form.number_field :intensite_reaction, class: "form-control" %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

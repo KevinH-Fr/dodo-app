@@ -1,0 +1,13 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>
+  Produits
+  <%= link_to "New produit", new_produit_path, class: "btn btn-primary" %>
+</h1>
+
+<div id="produits">
+  <% @produits.each do |produit| %>
+    <%= render partial: "produits/card_produit", locals: {produit: produit} %>
+  <% end %>
+</div>
+

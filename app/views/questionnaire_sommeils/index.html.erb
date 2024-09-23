@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Questionnaire sommeils</h1>
+
+<div id="questionnaire_sommeils">
+  <% @questionnaire_sommeils.each do |questionnaire_sommeil| %>
+    <%= render questionnaire_sommeil %>
+    <p>
+      <%= link_to "Show this questionnaire sommeil", questionnaire_sommeil %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New questionnaire sommeil", new_questionnaire_sommeil_path %>

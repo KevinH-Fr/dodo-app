@@ -1,0 +1,19 @@
+<div id="<%= dom_id produit %>" class="card p-2 mb-3">
+  <p>
+    <strong>Description:</strong>
+    <%= produit.description %>
+  </p>
+
+  <p>
+    <strong>Prix:</strong>
+    <%= produit.prix %>
+  </p>
+
+   <%= image_tag url_for(produit.image), alt: 'Produit Image', class: 'produit-image' %>
+
+
+  <p>
+    <%= link_to "Show", produit, class: "btn btn-primary" %>
+  </p>
+
+</div>

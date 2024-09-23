@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @questionnaire_sommeil %>
+
+<div>
+  <%= link_to "Edit this questionnaire sommeil", edit_questionnaire_sommeil_path(@questionnaire_sommeil) %> |
+  <%= link_to "Back to questionnaire sommeils", questionnaire_sommeils_path %>
+
+  <%= button_to "Destroy this questionnaire sommeil", @questionnaire_sommeil, method: :delete %>
+</div>

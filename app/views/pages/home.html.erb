@@ -1,0 +1,23 @@
+<h1>Accueil</h1>
+
+<% if @user %>
+    Connecté en tant que <%= @user.prenom %> <%= @user.nom %> <br> <br>
+
+    <%= render 'dashboard/dashboard_parent' %>
+
+<% else %>
+
+    <%= render 'shared/home_user_connexion' %>
+
+<% end %>
+
+<div class="container text-center my-4">
+    En tant que parents, nous savons combien il est important de bien dormir. 
+    Tant pour le bien-être de votre bébé que celui de votre famille. 
+    Mais chercher des informations sur le sommeil de votre bébé peut être stressant et parfois contradictoire.
+</div>
+
+<div class="container text-center my-4">
+    Remplissez notre questionnaire de découverte pour faire un premier bilan
+    <%= link_to  "Questionnaire sommeil", new_questionnaire_sommeil_path, class: "btn btn-primary m-2 fw-bold" %>
+</div>
